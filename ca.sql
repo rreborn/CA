@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.6
+-- version 4.2.11
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: May 05, 2015 at 03:58 PM
--- Server version: 5.6.16
--- PHP Version: 5.5.9
+-- Generation Time: May 05, 2015 at 05:49 PM
+-- Server version: 5.6.21
+-- PHP Version: 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -23,53 +23,63 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `request`
+-- Table structure for table `anggotacertified`
 --
 
-CREATE TABLE IF NOT EXISTS `request` (
-  `id_request` int(11) NOT NULL,
-  `Nama_Server` varchar(30) DEFAULT NULL,
-  `Organisasi` varchar(50) DEFAULT NULL,
-  `Departemen` varchar(20) DEFAULT NULL,
-  `Kota` varchar(30) DEFAULT NULL,
-  `Provinsi` varchar(50) DEFAULT NULL,
-  `Negara` varchar(30) DEFAULT NULL,
-  `Key_Size` char(1) DEFAULT NULL,
-  `Persetujuan` int(11) NOT NULL,
-  `id` varchar(8) NOT NULL,
-  PRIMARY KEY (`id_request`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+CREATE TABLE IF NOT EXISTS `anggotacertified` (
+`id` int(11) NOT NULL,
+  `usn` varchar(50) NOT NULL,
+  `pass` text NOT NULL,
+  `name` varchar(100) NOT NULL,
+  `alamat` varchar(200) NOT NULL,
+  `pekerjaan` varchar(50) NOT NULL,
+  `private_key` text,
+  `public_key` text,
+  `email` varchar(100) DEFAULT NULL,
+  `PIN` text,
+  `Key size` int(11) DEFAULT NULL
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `request`
+-- Dumping data for table `anggotacertified`
 --
 
-INSERT INTO `request` (`id_request`, `Nama_Server`, `Organisasi`, `Departemen`, `Kota`, `Provinsi`, `Negara`, `Key_Size`, `Persetujuan`, `id`) VALUES
-(1, 'Sesuatu.com', 'Something', 'Pemasaran', 'Sby', 'Jawa Timur', 'Indonesia', '1', 0, '1');
+INSERT INTO `anggotacertified` (`id`, `usn`, `pass`, `name`, `alamat`, `pekerjaan`, `private_key`, `public_key`, `email`, `PIN`, `Key size`) VALUES
+(1, 'bili', 'bili', 'Brilian T. Nugraha', 'jl. karya maju', 'mahasiswa', NULL, NULL, NULL, NULL, NULL),
+(2, 'ryan', 'ryan', 'ryan', 'ryan', 'ryan', NULL, NULL, NULL, NULL, NULL),
+(3, 'wik', 'wik', 'wik', 'wi', 'wik', NULL, NULL, NULL, NULL, NULL),
+(4, 'anno', 'anno', 'anno', 'anno', 'anno', NULL, NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Table structure for table `private_ca_data`
 --
 
-CREATE TABLE IF NOT EXISTS `user` (
-  `id` varchar(8) NOT NULL,
-  `nama` varchar(20) DEFAULT NULL,
-  `username` varchar(20) DEFAULT NULL,
-  `password` varchar(20) DEFAULT NULL,
-  `Kewenangan` char(1) DEFAULT NULL,
-  PRIMARY KEY (`id`)
+CREATE TABLE IF NOT EXISTS `private_ca_data` (
+  `key` text NOT NULL,
+  `name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `user`
+-- Indexes for dumped tables
 --
 
-INSERT INTO `user` (`id`, `nama`, `username`, `password`, `Kewenangan`) VALUES
-('A1', 'Anno', 'admin', 'admin', '2'),
-('U1', 'Wik', 'Coba', 'coba', '1');
+--
+-- Indexes for table `anggotacertified`
+--
+ALTER TABLE `anggotacertified`
+ ADD PRIMARY KEY (`id`);
 
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `anggotacertified`
+--
+ALTER TABLE `anggotacertified`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
