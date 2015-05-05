@@ -1,9 +1,4 @@
-<style>
-    body {
-      font-family: 'sans serif';
-      padding: 0;
-      margin: 0;
-    }
+
     .mid {
       text-align: center;
     }
@@ -33,7 +28,22 @@
       padding-right: 20px;
       box-sizing: border-box;
       border-right: solid black 1px;
-      background: #888888;
+      background: #666666;
     }
 
-  </style>
+    #button {
+      font-size: 1.2em;
+      padding: 12px 24px;
+      color: white;
+      border: 1px solid;
+      border-radius: 4px;
+      background-color: #5cb85c;
+      border-color: #4cae4c;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    #logo {
+      vertical-align: middle;
+      height: 30px;
+    }

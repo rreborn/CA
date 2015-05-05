@@ -9,62 +9,7 @@
   <head>
     <title>Certificate Signing Request Page</title>
   </head>
-  <style>
-    body {
-      font-family: 'sans serif';
-      padding: 0;
-      margin: 0;
-    }
-    .mid {
-      text-align: center;
-    }
-
-    .navbar a {
-      color: black;
-    }
-
-    .navbar {
-      height: 50px;
-      background: black;
-    }
-
-    .navbar ul {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
-
-    .navbar li {
-      color: white;
-      font-weight: bold;
-      line-height: 50px;
-      list-style: none;
-      display: inline-block;
-      padding-left: 10px;
-      padding-right: 20px;
-      box-sizing: border-box;
-      border-right: solid black 1px;
-      background: #666666;
-    }
-
-    #button {
-      font-size: 1.2em;
-      padding: 12px 24px;
-      color: white;
-      border: 1px solid;
-      border-radius: 4px;
-      background-color: #5cb85c;
-      border-color: #4cae4c;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    #logo {
-      vertical-align: middle;
-      height: 30px;
-    }
-
-  </style>
+<link rel="stylesheet" type="text/css" href="style.css">
   <body>
     <div class="navbar">
       <ul class="navbar-item">
