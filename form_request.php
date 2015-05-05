@@ -124,7 +124,7 @@
         <li style="background: white; border-bottom: solid #AAAAAA 1px; border-right: none; height: 49px;"><img id="logo" src="logo.png"></li><a href="member.php"><li>Home</li></a><a href="sertifikat_user.php"><li>Sertifikat Anda</li></a>
       </ul>
     </div>
-    <h1 class="mid" style="margin-top: 50px; margin-bottom: 50px; font-size: 2em">Halaman Request Sertifikat</h1>
+    <h1 class="mid" style="margin-top: 50px; margin-bottom: 50px; font-size: 2em">Request Sertifikat</h1>
     <p class="mid" style="font-size: 1.1em">Silahkan upload file CSR anda</p>
     <form id="form" class="mid">
       <input id="inputfile" type="file" name="csr">
@@ -150,8 +150,8 @@
       <div class="form-row">
         <div class="field-label">Provinsi</div><input class="field" id="csr-st">
       </div>
-      <button id="button" onclick="generate_command()">Buat Command</button>
-      <p class="mid hint">Setelah mengisi, silahkan copy command di bawah ini di terminal anda</p>
+      <button id="button" onclick="generate_command()">OK</button>
+      <p class="mid hint">Setelah mengisi, silahkan copy command di bawah ini di terminal anda untuk membuat file CSR</p>
       <textarea id="output" cols="60" class="mid" disabled>
         Silahkan isi form di atas terlebih dahulu
       </textarea>
